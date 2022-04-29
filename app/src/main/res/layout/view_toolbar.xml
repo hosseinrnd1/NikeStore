@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="rtl">
+
+    <ImageView
+        android:id="@+id/backBtn_toolbar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        app:srcCompat="@drawable/ic_back"
+        android:scaleType="centerInside"
+        android:background="?selectableItemBackgroundBorderless"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginStart="16dp"
+        />
+    <TextView
+        android:id="@+id/toolbarTitleTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="تیتر صفحه"
+        android:layout_marginStart="56dp"
+        android:layout_gravity="start|center_vertical"
+        style="?textAppearanceHeadline6"
+        />
+
+
+</FrameLayout>

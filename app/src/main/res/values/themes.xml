@@ -1,0 +1,49 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.NikeStore" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorOnSurface">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/gray</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="fontFamily">@font/iraniansans</item>
+        <item name="bottomNavigationStyle">@style/MyBottomNavigationView</item>
+        <item name="dividerColor">@color/gray</item>
+        <item name="windowBackgroundColorSub">#f5f5f5</item>
+        <item name="android:textColorSecondary">@color/darkGray</item>
+        <item name="android:lineSpacingExtra">6dp</item>
+        <item name="android:includeFontPadding">false</item>
+
+        <!--Material type attributes-->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.MyThem.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.MyThem.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.MyThem.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.MyThem.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.MyThem.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.MyThem.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.MyThem.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.MyThem.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.MyThem.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.MyThem.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.MyThem.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.MyThem.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.MyThem.Overline</item>
+
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="Theme.Nike.AuthTheme" parent="Theme.NikeStore">
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="colorOnBackground">@color/white</item>
+        <item name="colorOnSurface">@color/white</item>
+        <item name="materialButtonStyle">@style/Theme.NikeStore.AuthTheme.Button</item>
+
+    </style>
+
+</resources>

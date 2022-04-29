@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".product.ProductDetailActivity"
+    android:layoutDirection="rtl"
+    >
+    <com.myapp.nikestore.view.scroll.ObservableScrollView
+        android:id="@+id/observableScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="100dp"
+        android:clipToPadding="false"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.myapp.nikestore.view.NikeImageView
+                    android:id="@+id/productIv_Detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:viewAspectRatio="1.3"
+                    />
+            </FrameLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/productTitleTv_Detail"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    tools:text="نام محصول"
+                    android:maxLines="2"
+                    android:ellipsize="end"
+                    android:textAppearance="?textAppearanceBody1"
+                    app:layout_constraintEnd_toStartOf="@+id/previousPriceTv_Detail"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/previousPriceTv_Detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:textColor="?android:textColorSecondary"
+                    android:textAppearance="?textAppearanceBody2"
+                    tools:text="1250000 تومان"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/currentPriceTv_Detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?textAppearanceBody1"
+                    tools:text="800000 تومان"
+                    app:layout_constraintEnd_toEndOf="@+id/previousPriceTv_Detail"
+                    app:layout_constraintTop_toBottomOf="@+id/previousPriceTv_Detail" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"
+                android:text="این کتونی شدیدا برای دویدن و راه رفتن مناسب هست و تقریبا هیچ فشار مخربی را نمیگذارد به پا و زانوان شما برسد"
+                android:textAppearance="?textAppearanceBody1"
+                />
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/comments"
+                    style="?textAppearanceHeadline6"
+                    android:textColor="?android:textColorSecondary"
+                    android:layout_gravity="center_vertical|start"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/insertComment"
+                    android:layout_gravity="center_vertical|end"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    />
+
+
+
+            </FrameLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/commentsRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/background_comment"
+                />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/viewAllCommentBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/viewAllComments"
+                android:visibility="gone"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="32dp"
+                android:layout_marginTop="8dp"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+
+                />
+
+        </LinearLayout>
+
+    </com.myapp.nikestore.view.scroll.ObservableScrollView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:translationZ="5dp"
+
+        >
+        <ImageView
+            android:id="@+id/backBtn_detailProduct"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_back"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="16dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_favorites_24dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="16dp"
+            />
+    </FrameLayout>
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/toolbarView"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="4dp"
+        android:alpha="0"
+        >
+        <TextView
+            android:id="@+id/toolbarTitleTv_Detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="نام محصول"
+            android:textAppearance="@style/TextAppearance.MyThem.Headline6"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="48dp"
+            />
+
+    </com.google.android.material.card.MaterialCardView>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addToCartBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center"
+        android:text="@string/addToCart"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
